@@ -1,0 +1,5 @@
+{
+  "manifest_version": 3,
+  "name": "skip-yt-ad",
+  "description": "Setup a key-binding to skip ads on youtube"
+}
