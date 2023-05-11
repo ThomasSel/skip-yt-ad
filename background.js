@@ -1,7 +1,6 @@
 const skipVideo = () => {
-  document
-    .querySelector(".ytp-ad-skip-button-slot")
-    .dispatchEvent(new Event("click"));
+  const skipButtonEl = document.querySelector(".ytp-ad-skip-button-slot");
+  skipButtonEl?.dispatchEvent(new Event("click"));
 };
 
 const ytVideoUrl = "https://www.youtube.com/watch";
