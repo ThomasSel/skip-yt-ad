@@ -4,6 +4,29 @@
 
 ### Unskippable
 
+##### Structure:
+
+```html
+<div class="ytp-ad-player-overlay-skip-or-preview">
+  <div class="ytp-ad-preview-slot" id="ad-preview:1" style="">
+    <span class="ytp-ad-preview-container" style="">
+      <div class="ytp-ad-text ytp-ad-preview-text" id="ad-text:2" style="">
+        Ad will end\nin 6
+      </div>
+      <span class="ytp-ad-preview-image" style="display: none">
+        <img class="ytp-ad-image" style="" />
+      </span>
+    </span>
+  </div>
+</div>
+```
+
+##### Event Listeners
+
+- `.ytp-ad-preview-slot`: `click` (does nothing?)
+- `.ytp-ad-text.ytp-ad-preview-text`: `click` (does nothing?)
+- `.ytp-ad-image`: `click` (does nothing?)
+
 ### Countdown to skippable
 
 ##### Structure:
