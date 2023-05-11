@@ -27,42 +27,6 @@
 - `.ytp-ad-text.ytp-ad-preview-text`: `click` (does nothing?)
 - `.ytp-ad-image`: `click` (does nothing?)
 
-### Countdown to skippable
-
-##### Structure:
-
-```html
-<div class="ytp-ad-player-overlay-skip-or-preview">
-  <div class="ytp-ad-skip-ad-slot" id="skip-button:h" style="">
-    <div class="ytp-ad-preview-slot" id="preskip-component:i" style="">
-      <span
-        class="ytp-ad-preview-container countdown-next-to-thumbnail"
-        style=""
-      >
-        <div class="ytp-ad-text ytp-ad-preview-text" id="ad-text:j" style="">
-          5
-        </div>
-        <span class="ytp-ad-preview-image">
-          <img />
-        </span>
-      </span>
-    </div>
-    {...}
-  </div>
-</div>
-```
-
-##### Event listeners
-
-- `#skip-button:h`: `click` (does nothing?)
-  - _Note_ to query this element by its id, use `document.querySelector("#skip-button\\:h")`
-- `.ytp-ad-text.ytp-ad-preview-text`: `click` (does nothing?)
-- `.ytp-ad-preview-image > img`: `click` (does nothing?)
-
-##### Other notes
-
-- Inside the `{...}` of the HTML above, there are other elements with `click` event listeners, which largely mirror the structure of `#preskip-component:i`, but have their display set to none and whose clicks don't have an effect.
-
 ### Skippable
 
 ##### Structure:
@@ -127,7 +91,8 @@
   - The first is the countdown element
   - The second is the skip button
 - Depending on the skippable state of the ad, one of these components has `display: none`
-- Note that the click listeners on the skip button component still don't do anything when the ad isn't skippable
+- The click listener for `.ytp-ad-skip-button-container` still skips the ad, even if the countdown is currently being displayed.
+  IE if an ad is skippable you can run the extension at any time to skip it.
 
 ## Conclusions:
 
