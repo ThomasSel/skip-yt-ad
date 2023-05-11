@@ -1,5 +1,11 @@
 {
   "manifest_version": 3,
   "name": "skip-yt-ad",
-  "description": "Setup a key-binding to skip ads on youtube"
+  "description": "Setup a key-binding to skip ads on youtube",
+  "version": "1.0",
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting"]
 }
