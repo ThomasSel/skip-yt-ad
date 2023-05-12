@@ -28,11 +28,11 @@ Note that nothing will happen if the ad is not skippable.
 
 # Technical details
 
-The extension is self contained in the (background.js)[./background.js] file.
+The extension is self contained in the [background.js](./background.js) file.
 This file contains a listener for the `chrome.action` which is called
 whenever the user activates the extension normally via the extension
 button in the top right of the browser.
-Then inside (manifest.json)[./manifest.json], we also bind this action to the
+Then inside [manifest.json](./manifest.json), we also bind this action to the
 default keybinding for the extension.
 
 Inside this listener, we check that the page in the current tab is a
@@ -42,7 +42,7 @@ function on the page which attempts to skip the ad.
 
 To skip the ad itself, we fetch the ad skip button from the DOM.
 Through examination of the structure of youtube video pages (which
-can be found in the (skip-button.md)[./skip-button.md] file), the
+can be found in the [skip-button.md](./skip-button.md) file), the
 element with the class `.ytp-ad-skip-button-slot` contains the click
 listener which skips an ad.
 We then dispatch a click event to it's DOM element which skips the ad.
